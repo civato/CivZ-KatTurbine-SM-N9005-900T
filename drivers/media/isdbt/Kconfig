@@ -2,17 +2,10 @@ config ISDBT
 	bool "isdbt"
 	default n
 
-choice
+config ISDBT_FC8300
+	bool "ISDBT_FC8300"
 	depends on ISDBT
-	prompt "isdbt driver"
-	default ISDBT_FC8150
-
-	config ISDBT_FC8150
-		bool "ISDBT_FC8150"
-
-	config ISDBT_FC8300
-		bool "ISDBT_FC8300"
-endchoice
+	default n
 
 config ISDBT_SPMI
 	bool "isdbt spmi"
